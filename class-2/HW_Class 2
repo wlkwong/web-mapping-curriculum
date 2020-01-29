@@ -2,25 +2,40 @@ __Homework__
 
 For your class journal:
 
-1. What is the difference between raster and vector data? 
-
+1. What is the difference between raster and vector data?  
+  Raster data is comprised of cells arranged into a grid where each cell contains a value that represents information. For web maps, that information could include satellite imagery. Shortcomings of storing 
+  as a raster are large file size when you want higher resolution and inaccurate representation of a feature's boundaries due to data bend stored as square cells. 
+  Vector data stores map features as points, lines and polygons using x,y coordinates. Storing data as vector is especially useful when data has discrete boundaries like country borders, land parcels, and streets.
+  
 2. Why do "slippy maps" exist? 
-  Slippy maps came about to display a smoother map viewing experience, for example Google Maps. The way slippy maps work is to load the map tiles in and around an area of interest for a seamless experience  
+  Slippy maps came about to display a smoother map viewing experience, for example Google Maps. The way slippy maps work is to load the map tiles in and around an area of interest for a seamless view on a screen.  
 
 3. Why would you want to install a dedicated text editor? 
   A dedicated text editor allows you to code in one place and troubleshoot your code. 
   
 4. What is Leaflet? 
-  Leaflet is an open-source website that stores Javascript interactive maps. 
-5. How has web map rendering changed over the years? 
+  Leaflet is an open-source website that stores Javascript interactive maps. It is a tool for building and styling data layers. 
   
-6. What is the basemap-overlay paradigm and how are GL maps different?
+5. How has web map rendering changed over the years? 
+  1) print maps: Made by adding and styling data to a certain extent and scale. Map is then exported and printed as a static map. 
+    Most straighforward method of rendering maps. 
+  2) interactive,  multi-scale maps: Made by adding all the possble data needed, styling said data with a specific set of scales and extents, and exporting a billion or so map tiles.
+    a) early web maps, like MapQuest, consisted of pre-made or static images where every pan or zoom extent of the map needed to be loaded again on the page. 
+    b) tiled web maps gave users the flexibility to set their own extent and map clients would then load the minimum number of map tiles needed to make the map look seamless. 
+  
+6. What is the basemap-overlay paradigm and how are GL maps different? 
+  The basemap-overlay paradigm is defined as a base layer consisting of map tiles with data layers overlayed on top (GIS files). Base layer is the static map; data layers can be made up of lines, points, and/or polygons. 
+  GL maps are made by separating the vector tiles and stylesheets from the image rendering, which done as the last step. 
+  During image rendering step, the vector tiles and stylesheets, stored on a server, are rendered in a browser using a device's GPU (graphics processing unit). This type of map loads faster and allows for more customizations. 
+ 
+7. Head to the [Mapbox GL JS examples page](https://docs.mapbox.com/mapbox-gl-js/examples/) and pick two examples under the user interactions section. What kind of interactions do you see? Why might you use each of those interactions?
+ 
+
 
 Exercises to do on your own:
 
 1. Keep learning! Try one more of the Web apps tutorials on the [Mapbox help page](https://docs.mapbox.com/help/tutorials/#web-apps) and submit your completed tutorial to your GitHub project.
-2. Head to the [Mapbox GL JS examples page](https://docs.mapbox.com/mapbox-gl-js/examples/) and pick two examples under the user interactions section. What kind of interactions do you see? Why might you use each of those interactions?
-3. If you didn’t finish the “code together” exercise, please do so before next week.
+2. If you didn’t finish the “code together” exercise, please do so before next week.
 
 
 __Project__
@@ -30,8 +45,8 @@ Choose a project idea and open an issue in your GitHub repo describing what it i
 1. The topic you will focus on (one of: housing and homelessness, wildfires, or fracking.) 
   Well fracking locations
 2. A description of your audience. 
-  Our web map will be used by students, general public 
+  Our web map will be used by students and general public.  
 3. At least three questions you hope to be able to answer for your audience. 
-  -Which city in California has the highest number of fracking wells? 
-  -Do fracking wells tend to be close to larger or smaller populations? 
-  -Do fracking wells tend to be closer to low income areas? 
+  -Which city in California has the highest number of fracking wells? (lat-long data)
+  -Are there fracking wells next to SGMA aquifers that have a low recharge rate? (need water levels) 
+  -Do fracking wells tend to be closer to low income areas? (household income data - census?) 
