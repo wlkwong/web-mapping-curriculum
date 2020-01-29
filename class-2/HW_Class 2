@@ -29,8 +29,9 @@ For your class journal:
   During image rendering step, the vector tiles and stylesheets, stored on a server, are rendered in a browser using a device's GPU (graphics processing unit). This type of map loads faster and allows for more customizations. 
  
 7. Head to the [Mapbox GL JS examples page](https://docs.mapbox.com/mapbox-gl-js/examples/) and pick two examples under the user interactions section. What kind of interactions do you see? Why might you use each of those interactions?
- 
-
+  User interactions examples have features that can be added for the map user to customize their view of the map. For example, the user can filter features within a map view and update chloropleth layer by zoom level. 
+  Users might choose to filter features within a map view because they want to see the locations of a specific feature without overcrowding from other features and typing for a specific feature in the search box. 
+  Users might choose update chloropleth layer by zoom level because they want more details at a smaller scale. In the Mapbox example, the largest extent shows population data by state and when zoomed in, the extent shows population data by city and the chloropleth is shown at a smaller scale.
 
 Exercises to do on your own:
 
