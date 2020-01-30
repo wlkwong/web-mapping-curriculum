@@ -3,7 +3,7 @@ __Homework__
 For your class journal:
 
 1. What is the difference between raster and vector data?  
-  Raster data is comprised of cells arranged into a grid where each cell contains a value that represents information. For web maps, that information could include satellite imagery. Shortcomings of storing 
+  Raster data is comprised of cells arranged into a grid pattern where each cell contains a value that represents information. For web maps, that information could include satellite imagery. Shortcomings of storing 
   as a raster are large file size when you want higher resolution and inaccurate representation of a feature's boundaries due to data bend stored as square cells. 
   Vector data stores map features as points, lines and polygons using x,y coordinates. Storing data as vector is especially useful when data has discrete boundaries like country borders, land parcels, and streets.
   
