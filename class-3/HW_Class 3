@@ -1,0 +1,29 @@
+Intro to interactivity
+What are some strategies interactive map developers can use to ensure maps with a lot of interactions are not overwhelming?
+By considering the UI/UX we want to employ for our map, we can use the following strategies to not overwhelm the map reader: 
+-Map is designed for a specific audience who already has some technical knowledge
+-Simple layout but allows for straightforward paths for users with a specific questions to dig deeper and find the answers
+-Lets users take their time with the map rather than expressing the point of the map as quickly as possible. 
+-Consider how audience would view map as in mobile vs. desktop
+-Limit pan and zoom or predetermine where users can zoom, pan or fly-to
+-Add info boxes, popups
+-Add search box, geolocation button
+-Allow for tilting or rotation of map
+
+Why do we use the term “map user” instead of “map reader?” 
+Map users is more appropriate because they are self-guided users of our map and based on the interactions we have added to the map, choose what they want to experience. 
+Map readers were more appropriate for print cartography maps (static maps). 
+
+Common types of interaction
+What is geocoding and how might you add it to an interactive map?
+Geocoding is the process of converting human-readable search terms into mappable coordinates (and sometimes other contextual information). 
+It is very complex and usually never free because you would need an user account with a provider to have a working search box. 
+
+Intro to events
+What is an event?
+An event is an object that has specific information about what just happened. 
+
+Describe an example of how you could use an event listener with an interactive map.
+The event listener waits for a specific item to occur, is activated when it does occur, and carries out specific actions in response. 
+An event listener in an interactive map waits for the user to click someowhere on the map, and depending on the lat-long coordinates they clicked on, an infobox pops up
+
