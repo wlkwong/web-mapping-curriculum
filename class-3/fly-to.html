@@ -17,12 +17,29 @@
       height: 600px;
     }
 
+    #fly {
+        display: block;
+        position: center;
+        margin: 0px auto;
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #ee8a65;
+    }
+
   </style>
 </head>
 
 <body>
   <!-- Create a div to house the map -->
-  <div id="mapId"></div>
+  <div id="mapId"></div> 
+  <br />
+  <button id="fly">Fly</button>
 
   <script>
     // Set your Mapbox access token
@@ -54,9 +71,16 @@
      * set its popup to the popup variable you created earlier,
      * and add it to the map.
      */
-    var marker = new mapboxgl.Marker({color:"orange"}).setLngLat([-122.4700, 37.8011]).setPopup(popup).addTo(map);
+    var marker = new mapboxgl.Marker().setLngLat([-122.4700, 37.8011]).setPopup(popup).addTo(map);
 
-    
+    document.getElementById("fly").addEventListener("click", function() {
+        map.flyTo({
+            center: [-118.346, 46.056],
+            zoom: 10,
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
   </script>
 </body>
 
