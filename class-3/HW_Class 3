@@ -25,5 +25,4 @@ An event is an object that has specific information about what just happened.
 
 Describe an example of how you could use an event listener with an interactive map.
 The event listener waits for a specific item to occur, is activated when it does occur, and carries out specific actions in response. 
-An event listener in an interactive map waits for the user to click someowhere on the map, and depending on the lat-long coordinates they clicked on, an infobox pops up
-
+An example of an event listener in an interactive map is to wait for the user to click somewhere on the map, and depending on the lat-long coordinates they clicked on, an infobox pops up.
