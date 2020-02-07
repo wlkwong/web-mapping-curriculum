@@ -11,7 +11,7 @@ By considering the UI/UX we want to employ for our map, we can use the following
 -Allow for tilting or rotation of map
 
 Why do we use the term “map user” instead of “map reader?” 
-Map users is more appropriate because they are self-guided users of our map and based on the interactions we have added to the map, choose what they want to experience. 
+Map users are more appropriate because they are self-guided users of our map and based on the interactions we have added to the map, choose what they want to experience. 
 Map readers were more appropriate for print cartography maps (static maps). 
 
 Common types of interaction
