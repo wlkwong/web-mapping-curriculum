@@ -99,12 +99,12 @@ Should include:
     });
     matchedFeatures.forEach(function(feature){
         var layerLabel = layersList[feature.layer.id].label;
-        var layerId = layersList[feature.layer.id].id; 
+        var layerId = layersList[feature.layer.id].idProperty; 
 
         var myHtml = "<p class='jurisdiction-item'><span class='jurisdiction-descriptor'>" + layerLabel + "</span>: " + feature.properties[layerId] + "</p>";
         listItems+=myHtml
     });
-    listContainer.innerHTML = listItems    
+    listContainer.innerHTML = listItems;    
     });
      
   // Loop through the matchedFeatures using forEach
