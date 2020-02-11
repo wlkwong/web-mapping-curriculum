@@ -8,17 +8,19 @@ Objects recap
 Intro to “client-side”
 
     What does client-side rendering mean in the context of web maps?
-    Client-side rendering involves the 
+    Client-side rendering means that clients will render the vector tiles and associated CSS rules on a browser. This gives clients the flexibility to alter the map's style and data the web maps display through user interactions.
     
     Why is it possible for Mapbox GL JS to place labels dynamically as you interact with the map? 
-    Mapbox GL JS can place labels dynamically as the client interact with the map using collision boxes. Depending on the zoom level, collision boxes are expressed as label boxes are shown while other label boxes are not.
+    Mapbox GL JS can place labels dynamically as the client interact with the map using collision boxes. Depending on the map extent, label boxes are shown while the other label boxes that are nots shown, are collision boxes.
     
 Jurisdiction finder recap For the following 3 prompts, reference the working file and README.md in the jurisdiction finder explanation folder in the main class repo.
 
     Describe how feature gets to the makeFeatureLabel() function. 
-    
+    The makeFeatureLabel() function takes the feature and creates a human-readable label for each of the associated district map layers in the pre-made map. 
     
     What does the getDistrictNumber() function do? 
-    
+    The getDistrictNumber() function translates between a feature's associated district map layer and the appropriate district ID 
+    attribute name, then returns the district's ID number. This function is needed because each data source (for each layer) uses a specific attribute name. 
     
     Looking at the callback to map.on('click',...), what is e and why do we need it?
+    We used 'e' as an event object that turns on when the map is clicked. The event will be carried out as specified in the code. 
