@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Display a map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    </style>
+</head>
+
+<body>
+  <div id="map"></div> 
+
+  <script> 
+    mapboxgl.accessToken = "pk.eyJ1Ijoid2xrd29uZyIsImEiOiJjazU3YjZkanEwMXhpM2xwMzZ1eTAwcWlyIn0.uVrlu2xNC7qJIIa_bL9fFA"; 
+
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-122.411, 37.714], 
+      zoom: 13
+    });
+
+//GeoJSON code w childhood home outline coordinates 
+//link to map: 'http://geojson.io/#map=19/37.71417/-122.41136'
+map.on('load', function(){
+  map.addSource ('childhood', {
+    'type':'geojson',
+    'data':{
+        'type': 'FeatureCollection',
+        'features':[
+          { 
+          'properties':{},
+            'geometry': {
+              'type': 'Polygon',
+              'coordinates': [
+                [
+                  [-122.4116125702858,37.71431074400989],
+                  [-122.41164475679396, 37.714244967649265],
+                  [-122.4115052819252, 37.71421101853704],               
+                  [-122.41148114204405, 37.71427255129149],                             
+                  [-122.4116125702858,37.71431074400989]                            
+                ]
+              ]
+             }    
+           }
+         ]  
+        }
+      } 
+    )
+  }); 
+
+  map.addLayer ({
+    'id':'childhood',
+    'type':'fill',
+    'source':'childhood',
+    'layout':{},
+    'paint': {
+      'fill-color': 'gray',
+      'fill-opacity': 0.8
+    }
+  });
+//end GeoJSON code 
+//add eventListener for click. 
+//map.on ('click', 'childhood-home', function(e){
+
+//});
+//change childhood polygon to yellow once clicked
+
+</script>
+
+</body>
+
+</html>
