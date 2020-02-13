@@ -1,0 +1,52 @@
+//Assignment Functions: 
+
+// [1]  Print "hello" once. 
+console.log ("Hello");
+
+// [2] Write a function called print that prints "My favorite book" once and then call that function. . 
+function print(){
+  console.log ("My favorite book");
+}
+print();
+// [3] Write a function called doubleprint that calls your print function twice. Call doubleprint.
+function doubleprint(){
+  console.log ("My favorite book");
+  console.log ("My favorite book");
+}
+doubleprint();
+
+// [4] Write a function called myfavoritebook that accepts two parameters: text, book. In the body of the function (between the {}), write console.log(text), console.log(book). Call your new function and replace the first parameter with your print function and the second parameter with "Your favorite book".
+function myfavoritebook(text, book){
+  console.log (text);
+  console.log (book);
+} 
+myfavoritebook(print,"Your favorite book"); 
+
+//Assignment: Loops
+
+// [1] Write a function that prints "Good morning!" Then, write a for loop that calls your function 10 times.
+function greeting(number){
+  if (number){
+    console.log (number + " Good morning!");
+  }
+}
+for (i=1; i<11; i++){
+  greeting(i)
+}
+
+// [2] Write a for loop that iterates through the following list of numbers and prints out the product of that number times 5.
+
+var numberArray = ['2', '10', '5', '4.5']; 
+
+for(i=0; i<numberArray.length; i++) {
+  console.log(numberArray[i]*5);
+}
+
+// [3] Create an array with a list of names. Loop through that array using forEach and print that name plus " is my friend."
+var friendsArray = ['Kevin','Emily','Jaimie','Eric']; 
+
+function printList(friendsArray) {
+  console.log(friendsArray + ' is my friend');
+}
+
+friendsArray.forEach(printList);
