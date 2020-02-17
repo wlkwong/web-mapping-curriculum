@@ -1,0 +1,25 @@
+Runtime styling
+
+    What do we mean when we talk about a program’s “lifecycle?” 
+    The lifecycle of a program represents the specific, discrete steps a computer program completes as it runs.
+    
+    What does “runtime” mean? 
+    Runtime is the phase in the computer program where your program is getting executed and does the thing the program was 
+    commanded to do until the user tells it to stop or the browser is closed. 
+
+Lesson recap
+
+    In JavaScript, what is a function and when might you want to create one?
+    A JavaScript function is a set of statements created to perform a particular task(s). If you plan on exceuting the same 
+    task multiple times, creating a function allows you to call the function rather than re-type the set of statements again.
+    
+    In CSS, what is the difference between a class and an id? 
+    A CSS id  starts with a '#' sign and styles a single element with a unique id name. 
+    A CSS class starts with a '.' sign and can be used to style multiple elements the same way. 
+    
+    In HTML, does the order of elements matter? Why? 
+    For HTML, the order of the elements matter because 
+    
+    When might you need to use an array? How about an object? 
+    An array is used when you want an ordered list and to access each value in the array by index number (i). 
+    An object is used when order doesn't matter and to access each value in the object by name. 
