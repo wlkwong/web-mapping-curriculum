@@ -55,7 +55,7 @@ Isolate 10 desired counties.
 Only show the 10 counties along with the first paragraph of the scrollytelling map.
 2. Population Affected
 Get populations of all ten counties with fracking.
-Calculate total
+Calculate total.
 Show up in popups. 
 3. CA Fracking Wells 
 Add all wells from shapefile 
