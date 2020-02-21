@@ -58,7 +58,22 @@ Get populations of all ten counties with fracking.
 Calculate total.
 Show up in popups. 
 3. CA Fracking Wells 
-Add all wells from shapefile 
+Add all wells from shapefile. 
 Determine if fracking wells are located in high priority GW basins (SGMA 2019 Basin Prioritization Plan).
 4. CA GW Basins 
 Add all CA GW basins. 
+Differentiate GW basins that have fracking wells and high priority GW basins (SGMA 2019 Basin Prioritization Plan) from GW basins not expected to be impacted with different colors. 
+
+For each dataset, description of how the data will be displayed on your web map. What kinds of UI elements and interactions will you need to build for your user to understand each dataset? 
+
+1. Counties 
+10 counties that have fracking activity will be highlighted.
+Linked to a paragraph in the scrollytelling map.
+2. Population Affected
+Total can be in scrollytelling text.
+Population for each county can be a popup when alongside paragraph with corresponding scrollytelling text.
+3. CA Fracking Wells 
+All fracking wells will be shown in one color and symbolized by a circle that re-adjusts in size as the map user zooms in.
+4. CA GW Basins 
+Different colors for basins that are overdrawn versus basins not affected by fracking. 
+Select GW basins will have scrollytelling text, for example, the most overdrawn GW basins (summarize report text from SGMA 2019 Basin Prioritization Plan).
