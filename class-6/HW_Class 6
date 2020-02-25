@@ -30,4 +30,5 @@ Inline writing prompts
     3. Should you set the marker's lngLat and add it to the map? Why or why not? 
     The marker's lnglat should be set on the click and then added to the map. That way, when the map user clicks elsewhere, the marker will move to where the map was clicked. 
     
-    4. How did you know which arguments to pass to the pip() function?
+    4. How did you know which arguments to pass to the pip() function? 
+    The proper arguments are shown in the 'Utility Functions' portion of the code. 
