@@ -1,0 +1,33 @@
+Data prep and analysis
+
+    1. Find at least two web mapping examples that allow for user analysis. For each example provide: 1) a link to the web map and 2) a description of the user analysis
+    Example 1: 1)
+    2) 
+    
+    Example 2: 1) 
+    2) 
+    
+    2. Give an example of static data you might include on a web map. How is your example different from dynamic data? 
+    Static data added to a web map could be boundaries of countries in the EU. EU country boundaries are different from dynamic data because they generally remain unchanged and no additional interpretation is necessary from the map user. 
+    
+    3. Under what circumstances might you want to do some data prep in desktop GIS before incorporating data into your web map? Give an example of the type of data that might apply here.
+    Before incorporating to a web map, data prep in desktop GIS is necessary when there is extra attribute table columns, precision needs to be maintained, 
+    
+    4. What are some data characteristics that can impact rendering speed? How might you address these issues? 
+    Data characteristics that impact rendering speed is size of the data, most data processing occurs at the time the map is displayed, 
+    
+    5. What is turf.js? Give an example of how you could apply a turf operation to a web map. 
+    Turf.js is a version of GIS in a browser that have some common GIS concepts. Turf operation can be applied to a web map by 
+
+Inline writing prompts
+
+    1. Describe where the centroids variable comes from. How is it possible for you to reference this variable when you didn't declare it?
+    The centroid variable comes from adding the script of a separate centroids data file in the head portion of the code, making it a global variable. 
+    
+    2. Why might you want to create the 'centroids-selected' layer after you've created the 'centroids' layer? 
+    The purpose of the 'centroids-selected' layer is to contain and be able to style the centroids that have actually been selected by the map user and differentiate from the centroids not selected. 
+    
+    3. Should you set the marker's lngLat and add it to the map? Why or why not? 
+    The marker's lnglat should be set on the click and then added to the map. That way, when the map user clicks elsewhere, the marker will move to where the map was clicked. 
+    
+    4. How did you know which arguments to pass to the pip() function?
