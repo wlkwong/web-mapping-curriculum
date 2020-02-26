@@ -8,7 +8,7 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
 <!-- 🔰 Using a script tag, link to centroids data file, which lives in the same directory as this file and contains a variable called "centroids" you can reference in your map code -->
-<script src="https://github.com/mapbox/web-mapping-curriculum/blob/master/class-6/homework/centroids.js"></script>
+<script src="C:\Users\Wendy\Desktop\USF\Web Mapping\centroids.js"></script>
 
 <style>
 	body { margin: 0; padding: 0; }
@@ -125,7 +125,7 @@
     map.on('click', function(e){
     
       // 🔰 Store the lngLat associated with the click event as a variable called clickedLngLat
-      var clickedLngLat = [e.lngLat.lng, e.lngLat.lat];
+      var clickedLngLat = e.lngLat;
 
       //🔰 When a click occurs, set the marker's [lng, lat] to the location of the click
       // Add the marker to the map.
@@ -150,7 +150,7 @@
       map.getSource('centroids-selected').setData(selectedPoints);
 
       //🔰 Call the buildLocationsList utility function with the appropriate arguments.
-      function buildLocationsList(selectedPoints, containerId);
+      buildLocationsList();
     });    
 
     /****** UTILITY FUNCTIONS *******/
@@ -166,15 +166,15 @@
       //🔰 Create a variable called point and assign its value to:
         // use turf.point() to generate a GeoJSON point from lngLatArray.
         // https://turfjs.org/docs/#point
-      
+      var point = turf.point(lngLatArray);
       
       //🔰 Create a variable called buffered. Assign its value to:
-        // Use turf's buffer function to make a polygon that around the clicked point
+        // Use turf's buffer function to make a polygon that is around the clicked point
         // https://turfjs.org/docs/#buffer
-      
+      var buffered = turf.buffer(point, radiusInMeters, {unit: 'meters'});
 
       //🔰 Return the buffered feature
-      
+      return buffered;
     }
 
     /**
@@ -188,10 +188,10 @@
       //🔰 Create a variable called selectedPoints and set its value to:
         // use turf.pointsWithinPolygon to find the points that fall within a given polygon.
         // https://turfjs.org/docs/#pointsWithinPolygon
-      
+      var selectedPoints = turf.pointsWithinPolygon(points, polygon);
 
       //🔰 Return selectedPoints
-      
+      return selectedPoints;
     }
 
     /**
@@ -202,7 +202,7 @@
     function buildLocationsList(selectedPoints, containerId) {
       //🔰 Use document.getElementById to get the element with the ID passed to this function.
       // Create a variable called container and assign the above to it.
-      
+      var container = document.getElementById('container');
       
       var pointBullets = selectedPoints.features.map(function(point) {
         // Some of the parcel data doesn't have full addresses. 
@@ -218,7 +218,7 @@
       // 🔰 Create a variable called bulletsList.
       // Using the logic in the previous loop as a model, wrap the pointBullets list in an unordered list: https://www.w3schools.com/html/html_lists.asp
       // Hint: you can use join('') to turn the pointBullets array into a single string: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
-      
+      //var bulletsList = pointBullets.join('');
 
       // 🔰 Assign the container's innerHTML to the value of the bulletsList variable you just created. https://www.w3schools.com/jsref/prop_html_innerhtml.asp
       
