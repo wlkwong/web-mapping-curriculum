@@ -144,7 +144,7 @@
             /**************************
              * [📝 PROMPT 4] How did you know which arguments to pass to the pip() function?
             ***************************/
-      var selectedPoints = pip(pointsFeatureCollection, polygon);
+      var selectedPoints = pip(centroids-selected, search-radius);
 
       //🔰 Get the centroids-selected source. Set its data to the selected points created in the previous step.
       map.getSource('centroids-selected').setData(selectedPoints);
@@ -188,7 +188,7 @@
       //🔰 Create a variable called selectedPoints and set its value to:
         // use turf.pointsWithinPolygon to find the points that fall within a given polygon.
         // https://turfjs.org/docs/#pointsWithinPolygon
-      var selectedPoints = turf.pointsWithinPolygon(points, polygon);
+      var selectedPoints = turf.pointsWithinPolygon(centroids-selected, search-radius);
 
       //🔰 Return selectedPoints
       return selectedPoints;
@@ -221,7 +221,7 @@
       //var bulletsList = pointBullets.join('');
 
       // 🔰 Assign the container's innerHTML to the value of the bulletsList variable you just created. https://www.w3schools.com/jsref/prop_html_innerhtml.asp
-      
+      //document.getElementById('container').innerHTML = bulletsList;
     }
 </script>
 
