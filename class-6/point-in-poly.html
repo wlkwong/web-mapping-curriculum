@@ -171,7 +171,7 @@
       //🔰 Create a variable called buffered. Assign its value to:
         // Use turf's buffer function to make a polygon that is around the clicked point
         // https://turfjs.org/docs/#buffer
-      var buffered = turf.buffer(point, radiusInMeters, {unit: 'meters'});
+      var buffered = turf.buffer(point, radiusInMeters, {units: 'meters'});
 
       //🔰 Return the buffered feature
       return buffered;
@@ -197,15 +197,15 @@
     /**
      * Generates a textual list of locations and puts that list inside an HTML container.
      * selectedPoints {object} - A GeoJSON FeatureCollection containing a set of points.
-     * containerId {string} - The ID of the container into which the location list should be placed.
+     * containerId {string} - The ID of the container into which the location list should be placed. String in quotes
      */
     function buildLocationsList(selectedPoints, containerId) {
       //🔰 Use document.getElementById to get the element with the ID passed to this function.
-      // Create a variable called container and assign the above to it.
-      var container = document.getElementById('container');
+      // Create a variable called container and assign the above to it. This utility function will work for any container
+      var container = document.getElementById(containerId);
       
       var pointBullets = selectedPoints.features.map(function(point) {
-        // Some of the parcel data doesn't have full addresses. 
+        // pointBullets are all geojson points selected. Some of the parcel data doesn't have full addresses. 
         // The following line checks if the current point has a value in its to_st property. If the address value exists,
         // construct a line item with the address value. If not, construct a line item with the parcel number instead.
         if (point.properties.to_st) {
@@ -215,13 +215,13 @@
         }
       });
 
-      // 🔰 Create a variable called bulletsList.
+      // 🔰 Create a variable called bulletsList. Ordered list uses numbers, unordered list uses bullet points
       // Using the logic in the previous loop as a model, wrap the pointBullets list in an unordered list: https://www.w3schools.com/html/html_lists.asp
       // Hint: you can use join('') to turn the pointBullets array into a single string: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
-      //var bulletsList = pointBullets.join('');
+      var bulletsList = "<ul>" + pointBullets.join('') + "</ul>";
 
       // 🔰 Assign the container's innerHTML to the value of the bulletsList variable you just created. https://www.w3schools.com/jsref/prop_html_innerhtml.asp
-      //document.getElementById('container').innerHTML = bulletsList;
+      container.innerHTML = bulletsList;
     }
 </script>
 
