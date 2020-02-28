@@ -1,11 +1,11 @@
 Data prep and analysis
 
     1. Find at least two web mapping examples that allow for user analysis. For each example provide: 1) a link to the web map and 2) a description of the user analysis
-    Example 1: 1)
-    2) 
+    Example 1: 1) www.google.com/maps
+    2) Allows user to zoom, search, navigate to a location
     
-    Example 2: 1) 
-    2) 
+    Example 2: 1) https://explorer.adaptingtorisingtides.org/explorer
+    2) User can zoom, select total water level, sea level rise and storm surge and show layer on map, show popups with definitions and additional information
     
     2. Give an example of static data you might include on a web map. How is your example different from dynamic data? 
     Static data added to a web map could be boundaries of countries in the EU. EU country boundaries are different from dynamic data because they generally remain unchanged and no additional interpretation is necessary from the map user. 
@@ -14,10 +14,10 @@ Data prep and analysis
     Before incorporating to a web map, data prep in desktop GIS is necessary when there is extra attribute table columns, precision needs to be maintained, 
     
     4. What are some data characteristics that can impact rendering speed? How might you address these issues? 
-    Data characteristics that impact rendering speed is size of the data, most data processing occurs at the time the map is displayed, 
+    Data characteristics that impact rendering speed is size of the data and most data processing occurs at the time the map is displayed. To help with size of data, some data can be pre-loaded before the map gets to the user.
     
     5. What is turf.js? Give an example of how you could apply a turf operation to a web map. 
-    Turf.js is a version of GIS in a browser that have some common GIS concepts. Turf operation can be applied to a web map by 
+    Turf.js is a version of GIS in a browser that have some common GIS concepts. Turf operation can be applied to a web map by adding a search radius. 
 
 Inline writing prompts
 
@@ -28,7 +28,7 @@ Inline writing prompts
     The purpose of the 'centroids-selected' layer is to contain and be able to style the centroids that have actually been selected by the map user and differentiate from the centroids not selected. 
     
     3. Should you set the marker's lngLat and add it to the map? Why or why not? 
-    The marker's lnglat should be set on the click and then added to the map. That way, when the map user clicks elsewhere, the marker will move to where the map was clicked. 
+    The marker's lnglat should be set on the click rather than on the marker variable and then added to the map. That way, when the map user clicks elsewhere, the marker will move to where the map was clicked. 
     
     4. How did you know which arguments to pass to the pip() function? 
-    The proper arguments are shown in the 'Utility Functions' portion of the code. 
+    The proper arguments are shown in the 'Utility Functions' portion of the code. We need to add the proper variables that relate to pip() function, in this case centroids for the pointsFeatureCollection parameter and searchRadius for the polygon parameter.
