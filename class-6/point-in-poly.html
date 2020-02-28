@@ -8,7 +8,7 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
 <!-- 🔰 Using a script tag, link to centroids data file, which lives in the same directory as this file and contains a variable called "centroids" you can reference in your map code -->
-<script src="C:\Users\Wendy\Desktop\USF\Web Mapping\centroids.js"></script>
+<script src="centroids.js"></script>
 
 <style>
 	body { margin: 0; padding: 0; }
@@ -144,13 +144,13 @@
             /**************************
              * [📝 PROMPT 4] How did you know which arguments to pass to the pip() function?
             ***************************/
-      var selectedPoints = pip(centroids-selected, search-radius);
+      var selectedPoints = pip(centroids, searchRadius);
 
       //🔰 Get the centroids-selected source. Set its data to the selected points created in the previous step.
       map.getSource('centroids-selected').setData(selectedPoints);
 
       //🔰 Call the buildLocationsList utility function with the appropriate arguments.
-      buildLocationsList();
+      buildLocationsList(selectedPoints, 'bulletsContainer');
     });    
 
     /****** UTILITY FUNCTIONS *******/
@@ -188,7 +188,7 @@
       //🔰 Create a variable called selectedPoints and set its value to:
         // use turf.pointsWithinPolygon to find the points that fall within a given polygon.
         // https://turfjs.org/docs/#pointsWithinPolygon
-      var selectedPoints = turf.pointsWithinPolygon(centroids-selected, search-radius);
+      var selectedPoints = turf.pointsWithinPolygon(pointsFeatureCollection, polygon);
 
       //🔰 Return selectedPoints
       return selectedPoints;
