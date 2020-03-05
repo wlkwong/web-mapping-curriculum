@@ -1,0 +1,31 @@
+Web app cartography
+
+    1. Color plays a significant role in the visualization of map data. What are some important considerations to keep in mind when choosing the appropriate color scheme for your map?
+    To choose the appropriate color scheme for my map, factors to consider are to not use a red-green color scheme, the meaning of the colors used for your map audience, and what observations you want to convey through your data classification.
+
+    2. Why might you want to avoid using a rainbow color scheme?
+    A rainbow color scheme is too distracting for the map user and takes away from the main purpose of the map. 
+    Rainbow colors also misrepresents sequential or diverging quantitative data with qualitative colors.
+
+    3. List and describe 2-3 different thematic map types
+    a. Choropleth maps use different shades of one color to convey quantity in terms of intensity of color. 
+       An example of a choropleth map is the number of crime reports grouped by San Francisco neighborhood.
+    b. Hexbin is a less detailed choropleth map and dot density map where quantity is generally symbolized by a hexagon and is not limited by geographic boundaries. 
+
+    4.What type of data is appropriately respresented by a sequential color scheme? What about a diverging color scheme?
+    A sequential color scheme is best used for quantitative data and shows the range of maximum to minimun data represented by the darkest to lightest color (or vice versa). 
+    A diverging color scheme is best used with to show how far apart the data is from a set point or mean. The farther the data is from the mean or set point, the darker the color representing the data.
+
+    5. Can you name any tools (either from the presentation or your web travels) that would be helpful for choosing colors?
+    One tool for choosing colors is the following link that shows the color keyword and the corresponding RGB value: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value 
+    Another one I have used is a color contrast checker here: https://webaim.org/resources/contrastchecker/
+
+CORS and working with external data
+
+    6. In your own words, describe why web map developers have to think about CORS.
+    Web map developers consider CORS because when the origin from a web application does not match access control origin from another web application, the web map won't load. 
+    Map developers will need to decide if they want to start their own server or try other methods of 
+    
+    7. What is the concept of "separation of concerns?"
+    Separation of concerns is a concept where your code is separated by programming language, for example, keeping different files for your javascript, CSS and HTML. 
+    It is a method of organization, similar to labeling your baking ingredients.
