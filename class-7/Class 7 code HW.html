@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Wetland Restoration South Bay Sites</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoid2xrd29uZyIsImEiOiJjazU3YjZkanEwMXhpM2xwMzZ1eTAwcWlyIn0.uVrlu2xNC7qJIIa_bL9fFA';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/wlkwong/ck76zqphz0bfb1io284ns9vsu', // stylesheet location
+        center: [-122.065, 37.481], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+    });
+
+    //map.on('click', function() { //Event listener for popup
+      //Add Don Edwards San Francisco Bay National Wildlife Refuge layer and label
+      //
+      /*map.addLayer({
+          
+      })
+      
+    });*/
+</script>
+
+</body>
+</html>
